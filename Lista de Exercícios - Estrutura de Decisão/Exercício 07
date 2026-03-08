@@ -1,0 +1,19 @@
+# Faça um programa que leia três números e mostre o maior e o menor deles.
+
+num1 = (input("digita primeiro numero: "))
+num2 = (input("digita Segundo numero: "))
+num3 = (input("digita Terceiro numero: "))
+
+if num1 > (num2) and num1 > (num3):
+    print(f"{num1} é o maior numero digitado")
+elif num2 > (num1) and num2 > (num3):
+    print(f"{num2} é o maior numero digitado")
+else:
+    print(f"{num3} é o maior numero digitado")
+
+if num1 < (num2) and num1 < (num3):
+    print(f"{num1} é o menor numero digitado") 
+elif num2 < (num1) and num2 < (num3):
+    print(f"{num2} é o menor numero digitado")
+else:
+    print(f"{num3} é o menor numero digitado")

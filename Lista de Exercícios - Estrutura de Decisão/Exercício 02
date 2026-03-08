@@ -1,0 +1,7 @@
+# Faça um programa que peça um valor e mostre na tela se o valor é positivo ou negativo.
+
+Num1= (input("Digite um numero: "))
+if int(Num1) > 0:
+    print(f"O número {Num1} é positivo")
+else:
+    print(f"O número {Num1} é negativo")
