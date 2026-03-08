@@ -1,0 +1,5 @@
+# Faça um programa que converta metros para centímetros.
+
+Metro = (input("Digita um número em metros: "))
+Centimetro = float(Metro) * 100
+print(Metro, "metros é igual a", Centimetro, "centímetros.")

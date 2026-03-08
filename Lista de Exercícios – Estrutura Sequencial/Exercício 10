@@ -1,0 +1,8 @@
+# Faça um programa que peça a temperatura em Celsius e converta para Fahrenheit. 
+# Fórmula: F = (C * 9/5) + 32.
+
+
+temperatura = float(input('Qual a temperatura? '))
+
+temperatura_fahrenheit = (temperatura * 9/5) + 32
+print(f"A temperatura em Fahrenheit é: {temperatura_fahrenheit}")
