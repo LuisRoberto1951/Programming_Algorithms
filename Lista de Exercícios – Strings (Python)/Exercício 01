@@ -1,0 +1,22 @@
+# Tamanho de strings: Leia duas strings, mostre o conteúdo e o tamanho de cada uma. 
+# Informe se possuem o mesmo tamanho e se o conteúdo é igual ou diferente.
+
+# 1. Leia duas strings
+texto1 = input("Digite a primeira string: ")
+texto2 = input("Digite a segunda string: ")
+
+# 2. Mostre o conteúdo e o tamanho de cada uma
+print(f"String 1: '{texto1}' - Tamanho: {len(texto1)}")
+print(f"String 2: '{texto2}' - Tamanho: {len(texto2)}")
+
+# 3. Informe se possuem o mesmo tamanho
+if len(texto1) == len(texto2):
+    print("As strings possuem o mesmo tamanho.")
+else:
+    print("As strings possuem tamanhos diferentes.")
+
+# 4. Informe se o conteúdo é igual ou diferente
+if texto1 == texto2:
+    print("Os conteúdos das strings são iguais.")
+else:
+    print("Os conteúdos das strings são diferentes.")
