@@ -1,0 +1,12 @@
+# Um pescador paga multa de R$4,00 por quilo excedente caso ultrapasse 50 kg de peixes.
+# Faça um programa que calcule excesso e multa.
+
+pesoPeixes = float(input("Digite o peso dos peixes em kg: "))
+if pesoPeixes > 50.0:
+    excesso = pesoPeixes - 50.0
+    multa = excesso * 4
+    print(f"O excesso de peso é: {excesso} kg")
+    print(f"A multa a ser paga é: R$ {multa:.2f}")
+else:
+    print("Não há excesso de peso.")
+    print("Não há multa a ser paga.")

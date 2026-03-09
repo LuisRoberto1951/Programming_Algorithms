@@ -1,0 +1,19 @@
+# Faça um programa que calcule o tempo aproximado de download de um arquivo dado.
+# O usuário deve digitar o tamanho do arquivo para download (em MB) e a velocidade da internet (em Mbps)
+
+tamanho_arquivo = float(input("Digite o tamanho do arquivo (MB): "))
+velocidade_internet = float(input("Digite a velocidade da internet (Mbps): "))
+
+# Conversão: tamanho em Megabits (MB * 8)
+tamanho_em_megabits = tamanho_arquivo * 8
+
+# Cálculo do tempo em segundos
+tempo_segundos = tamanho_em_megabits / velocidade_internet
+
+# Conversão para minutos para facilitar a leitura
+tempo_minutos = tempo_segundos / 60
+
+print("-" * 40)
+print(f"Tempo aproximado de download: {tempo_segundos:.2f} segundos")
+print(f"Ou aproximadamente: {tempo_minutos:.2f} minutos")
+print("-" * 40)

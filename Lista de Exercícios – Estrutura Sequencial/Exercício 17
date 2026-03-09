@@ -1,0 +1,17 @@
+# Versão avançada da tinta: 1 litro cobre 6 m2. Lata 18L (R$80) e galão 3,6L (R$25).
+# Calcular a melhor opção com 10% de folga.
+
+area = float(input("Digite o m² da área a ser pintada: "))
+area_com_folga = area * 1.10
+litro_necessario = 6 
+lata_necessaria = litro_necessario/18
+preco_lata_18L = 80
+preco_lata_3_6L = 25
+print (f"Litros necessários: {litro_necessario:.2f} litros")
+print (f"Latas necessárias: {lata_necessaria:.2f} latas")
+print (f"Preço total para lata 18L: R$ {preco_lata_18L:.2f}")
+print (f"Preço total para lata 3,6L: R$ {preco_lata_3_6L:.2f}")
+if preco_lata_18L < preco_lata_3_6L:
+    print("A melhor opção é comprar latas de 18L.")
+else:
+    print("A melhor opção é comprar galões de 3,6L.")

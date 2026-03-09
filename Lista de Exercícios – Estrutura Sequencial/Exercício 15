@@ -1,0 +1,13 @@
+# Faça um programa que calcule o salário com descontos: 
+# IR (11%), INSS (8%) e Sindicato (5%). Mostrar salário bruto e líquido.
+
+salário = float(input("Digite o salário: "))
+ir = salário * 0.11
+inss = salário * 0.08
+sindicato = salário * 0.05
+salário_liquido = salário - ir - inss - sindicato
+print(f"Salário bruto: R$ {salário:.2f}")
+print(f"Desconto IR: R$ {ir:.2f}")       
+print(f"Desconto INSS: R$ {inss:.2f}")
+print(f"Desconto Sindicato: R$ {sindicato:.2f}")
+print(f"Salário líquido: R$ {salário_liquido:.2f}")

@@ -1,0 +1,5 @@
+# Converta um valor em Gigabytes para Megabytes.
+
+valorGigabytes = float(input("Digite um valor em Gigabytes: "))
+valorMegabytes = valorGigabytes * 1024
+print(f"O valor em Megabytes é: {valorMegabytes}")

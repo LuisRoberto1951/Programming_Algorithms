@@ -1,0 +1,11 @@
+# Uma loja de tintas precisa calcular quantas latas comprar. 
+# 1 litro cobre 3 m2, lata tem 18 litros e custa R$80.
+
+area = float(input("Digite a área a ser pintada em m²: "))
+
+litros_necessarios = area / 3
+latas_necessarias = litros_necessarios / 18
+preco_total = latas_necessarias * 80
+print(f"Litros necessários: {litros_necessarios:.2f} litros")
+print(f"Latas necessárias: {latas_necessarias:.2f} latas")
+print(f"Preço total: R$ {preco_total:.2f}")
