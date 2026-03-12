@@ -1,0 +1,43 @@
+print("--- Simulador de Caixa Eletrônico ---")
+
+# Entrada do valor de saque
+valor = int(input("Qual valor deseja sacar? (Mínimo R$ 10 / Máximo R$ 600): "))
+
+# Validação dos limites
+if valor < 10 or valor > 600:
+    print("Valor inválido! O saque deve estar entre R$ 10 e R$ 600.")
+else:
+    print(f"\nPara sacar a quantia de R$ {valor}, o programa fornece:")
+    
+    # 1. Notas de 100
+    notas100 = valor // 100
+    valor %= 100  # O que sobra após as notas de 100
+    
+    # 2. Notas de 50
+    notas50 = valor // 50
+    valor %= 50   # O que sobra após as notas de 50
+    
+    # 3. Notas de 10
+    notas10 = valor // 10
+    valor %= 10   # O que sobra após as notas de 10
+    
+    # 4. Notas de 5
+    notas5 = valor // 5
+    valor %= 5    # O que sobra após as notas de 5
+    
+    # 5. Notas de 1
+    notas1 = valor
+
+    # Exibição apenas das notas que serão entregues
+    if notas100 > 0:
+        print(f"- {notas100} nota(s) de R$ 100")
+    if notas50 > 0:
+        print(f"- {notas5} nota(s) de R$ 50")
+    if notas10 > 0:
+        print(f"- {notas10} nota(s) de R$ 10")
+    if notas5 > 0:
+        print(f"- {notas5} nota(s) de R$ 5")
+    if notas1 > 0:
+        print(f"- {notas1} nota(s) de R$ 1")
+
+print("\nOperação finalizada.")

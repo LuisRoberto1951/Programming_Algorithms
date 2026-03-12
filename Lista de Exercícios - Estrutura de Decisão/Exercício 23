@@ -1,0 +1,17 @@
+# Solicita o número ao usuário
+entrada = input("Digite um número: ")
+
+# Substitui a vírgula por ponto para aceitar o padrão brasileiro (ex: 5,5)
+entrada = entrada.replace(',', '.')
+
+try:
+    numero = float(entrada)
+
+    # Lógica: Comparar o número com a sua versão arredondada
+    if numero == round(numero):
+        print(f"O número {int(numero)} é INTEIRO.")
+    else:
+        print(f"O número {numero} é DECIMAL.")
+
+except ValueError:
+    print("Entrada inválida! Por favor, digite um número numérico.")

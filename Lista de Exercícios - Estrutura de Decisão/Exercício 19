@@ -1,0 +1,53 @@
+# Solicita o número ao usuário
+entrada = input("Digite um número inteiro menor que 1000: ")
+
+# Validação simples de entrada
+if not entrada.isdigit():
+    print("Por favor, digite apenas números inteiros.")
+else:
+    numero = int(entrada)
+    
+    if numero >= 1000 or numero < 0:
+        print("Erro: O número deve ser entre 0 e 999.")
+    else:
+        # Extração das grandezas
+        centenas = numero // 100
+        dezenas = (numero % 100) // 10
+        unidades = numero % 10
+
+        # Lista para armazenar as descrições (ex: "3 centenas")
+        partes = []
+
+        # Verificação de Centenas
+        if centenas > 0:
+            texto = "centena" if centenas == 1 else "centenas"
+            partes.append(f"{centenas} {texto}")
+
+        # Verificação de Dezenas
+        if dezenas > 0:
+            texto = "dezena" if dezenas == 1 else "dezenas"
+            partes.append(f"{dezenas} {texto}")
+
+        # Verificação de Unidades
+        if unidades > 0:
+            texto = "unidade" if unidades == 1 else "unidades"
+            partes.append(f"{unidades} {texto}")
+
+        # Lógica de pontuação (vírgula e "e")
+        saida = ""
+        quantidade = len(partes)
+
+        if quantidade == 3:
+            # Caso: 3 centenas, 2 dezenas e 6 unidades
+            saida = f"{partes[0]}, {partes[1]} e {partes[2]}"
+        elif quantidade == 2:
+            # Caso: 1 dezena e 2 unidades
+            saida = f"{partes[0]} e {partes[1]}"
+        elif quantidade == 1:
+            # Caso: 5 unidades
+            saida = partes[0]
+        else:
+            # Caso para o número 0
+            saida = "0 unidades"
+
+        print(f"• {numero} = {saida}")

@@ -1,0 +1,32 @@
+print("--- Interrogatório Policial ---")
+print("Responda apenas com 'sim' ou 'nao'\n")
+
+# Inicializa o contador de respostas positivas
+pontos = 0
+
+# Lista de perguntas
+perguntas = [
+    "Telefonou para a vítima? ",
+    "Esteve no local do crime? ",
+    "Mora perto da vítima? ",
+    "Devia para a vítima? ",
+    "Já trabalhou com a vítima? "
+]
+
+# Loop para fazer as perguntas e contar os "sim"
+for p in perguntas:
+    resposta = input(p).strip().lower()
+    if resposta == "sim" or resposta == "s":
+        pontos += 1
+
+# Classificação baseada na pontuação
+print("\n" + "="*30)
+if pontos == 5:
+    print("Classificação: ASSASSINO 🚨")
+elif 3 <= pontos <= 4:
+    print("Classificação: CÚMPLICE ⚖️")
+elif pontos == 2:
+    print("Classificação: SUSPEITA 🔍")
+else:
+    print("Classificação: INOCENTE 🏳️")
+print("="*30)

@@ -1,0 +1,32 @@
+import math
+
+print("--- Calculadora de Equação do 2º Grau (ax² + bx + c) ---")
+
+# 1. Verificação do coeficiente 'a'
+a = float(input("Digite o valor de a: "))
+
+if a == 0:
+    print("O valor de 'a' é igual a zero. A equação não é do segundo grau. Programa encerrado.")
+else:
+    # O programa só pede 'b' e 'c' se 'a' for válido
+    b = float(input("Digite o valor de b: "))
+    c = float(input("Digite o valor de c: "))
+
+    # 2. Cálculo do Delta (Δ = b² - 4ac)
+    delta = (b ** 2) - (4 * a * c)
+    print(f"\nDelta calculado: {delta}")
+
+    # 3. Verificações do Delta
+    if delta < 0:
+        print("O delta é negativo. A equação não possui raízes reais. Programa encerrado.")
+    
+    elif delta == 0:
+        raiz = -b / (2 * a)
+        print(f"O delta é igual a zero. A equação possui apenas uma raiz real: {raiz:.2f}")
+    
+    else:
+        raiz1 = (-b + math.sqrt(delta)) / (2 * a)
+        raiz2 = (-b - math.sqrt(delta)) / (2 * a)
+        print("O delta é positivo. A equação possui duas raízes reais:")
+        print(f"Raiz 1 (x1): {raiz1:.2f}")
+        print(f"Raiz 2 (x2): {raiz2:.2f}")

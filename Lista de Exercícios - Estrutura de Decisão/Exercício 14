@@ -1,0 +1,35 @@
+# Entrada das notas
+nota1 = float(input("Digite a primeira nota: "))
+nota2 = float(input("Digite a segunda nota: "))
+
+# Cálculo da média
+media = (nota1 + nota2) / 2
+
+# Atribuição do conceito com base na média
+if 9.0 <= media <= 10.0:
+    conceito = "A"
+elif 7.5 <= media < 9.0:
+    conceito = "B"
+elif 6.0 <= media < 7.5:
+    conceito = "C"
+elif 4.0 <= media < 6.0:
+    conceito = "D"
+elif 0 <= media < 4.0:
+    conceito = "E"
+else:
+    conceito = "Inválido"
+
+# Definição do status (Aprovado ou Reprovado)
+if conceito in ["A", "B", "C"]:
+    situacao = "APROVADO"
+else:
+    situacao = "REPROVADO"
+
+# Exibição dos resultados
+print("-" * 30)
+print(f"Nota 1:  {nota1:>5.1f}")
+print(f"Nota 2:  {nota2:>5.1f}")
+print(f"Média:   {media:>5.1f}")
+print(f"Conceito: {conceito:>5}")
+print(f"Situação: {situacao}")
+print("-" * 30)

@@ -1,0 +1,57 @@
+# Entrada dos números
+num1 = float(input("Digite o primeiro número: "))
+num2 = float(input("Digite o segundo número: "))
+
+print("\nEscolha a operação:")
+print("1 - Soma (+)")
+print("2 - Subtração (-)")
+print("3 - Multiplicação (*)")
+print("4 - Divisão (/)")
+
+opcao = input("Qual operação deseja realizar? ")
+
+# Processamento da operação
+resultado = 0
+valido = True
+
+if opcao == '1':
+    resultado = num1 + num2
+elif opcao == '2':
+    resultado = num1 - num2
+elif opcao == '3':
+    resultado = num1 * num2
+elif opcao == '4':
+    if num2 != 0:
+        resultado = num1 / num2
+    else:
+        print("Erro: Divisão por zero não é permitida.")
+        valido = False
+else:
+    print("Opção inválida!")
+    valido = False
+
+# Análise do resultado
+if valido:
+    # 1. Par ou Ímpar (Apenas para inteiros, logicamente)
+    if resultado % 2 == 0:
+        par_impar = "Par"
+    else:
+        par_impar = "Ímpar"
+
+    # 2. Positivo ou Negativo
+    if resultado >= 0:
+        pos_neg = "Positivo"
+    else:
+        pos_neg = "Negativo"
+
+    # 3. Inteiro ou Decimal
+    if resultado == round(resultado):
+        int_dec = "Inteiro"
+    else:
+        int_dec = "Decimal"
+
+    # Exibição Final
+    print("-" * 40)
+    print(f"Resultado da operação: {resultado}")
+    print(f"O número é: {par_impar}, {pos_neg} e {int_dec}.")
+    print("-" * 40)

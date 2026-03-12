@@ -1,0 +1,12 @@
+# Solicita o número inteiro ao usuário
+try:
+    numero = int(input("Digite um número inteiro: "))
+
+    # Lógica: Se o resto da divisão por 2 for zero, é par
+    if numero % 2 == 0:
+        print(f"O número {numero} é PAR. ✅")
+    else:
+        print(f"O número {numero} é ÍMPAR. 💡")
+
+except ValueError:
+    print("Entrada inválida! Por favor, digite apenas números inteiros.")

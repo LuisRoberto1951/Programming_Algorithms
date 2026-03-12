@@ -1,0 +1,36 @@
+# Entrada de dados
+valor_hora = float(input("Digite o valor da sua hora: R$ "))
+horas_trabalhadas = float(input("Digite a quantidade de horas trabalhadas no mês: "))
+
+# Cálculo do Salário Bruto
+salario_bruto = valor_hora * horas_trabalhadas
+
+# Definição da alíquota do IR
+if salario_bruto <= 900:
+    percentual_ir = 0
+elif salario_bruto <= 1500:
+    percentual_ir = 5
+elif salario_bruto <= 2500:
+    percentual_ir = 10
+else:
+    percentual_ir = 20
+
+# Cálculos dos descontos e taxas
+ir = salario_bruto * (percentual_ir / 100)
+inss = salario_bruto * 0.10  # Conforme o exemplo (10%)
+sindicato = salario_bruto * 0.03
+fgts = salario_bruto * 0.11
+total_descontos = ir + inss
+salario_liquido = salario_bruto - total_descontos
+
+# Exibição dos resultados
+print("\n" + "="*30)
+print(f"Folha de Pagamento")
+print("="*30)
+print(f"Salário Bruto: ({valor_hora:.0f} * {horas_trabalhadas:.0f}) : R$ {salario_bruto:8.2f}")
+print(f"(-) IR ({percentual_ir}%)                     : R$ {ir:8.2f}")
+print(f"(-) INSS (10%)                   : R$ {inss:8.2f}")
+print(f"FGTS (11%)                       : R$ {fgts:8.2f}")
+print(f"Total de descontos               : R$ {total_descontos:8.2f}")
+print(f"Salário Líquido                  : R$ {salario_liquido:8.2f}")
+print("="*30)
