@@ -1,0 +1,5 @@
+# Escada invertida: Mostre o nome em escada decrescente.
+
+Nome = (input("Digite seu nome: "))
+for i in range(len(Nome), 0, -1):
+    print(Nome[:i])

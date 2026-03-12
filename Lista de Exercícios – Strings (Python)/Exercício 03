@@ -1,0 +1,5 @@
+# Nome na vertical: Solicite o nome do usuário e imprima cada letra em uma linha.
+
+Nome = (input("Digite um nome: "))
+for letra in Nome:
+    print(letra)

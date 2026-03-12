@@ -1,0 +1,36 @@
+# Palavra embaralhada: Mostre uma palavra com letras embaralhadas e permita que o usuário adivinhe.
+
+import random
+
+def jogar_palavra_embaralhada():
+    # 1. Banco de dados simples de palavras
+    palavras = ["python", "algoritmo", "figma", "xano", "vscode", "interface", "backend"]
+    
+    # 2. Escolhe uma palavra e guarda a original
+    palavra_original = random.choice(palavras).lower()
+    
+    # 3. Embaralha as letras
+    letras = list(palavra_original)
+    random.shuffle(letras)
+    palavra_embaralhada = "".join(letras)
+
+    print("=== JOGO DA PALAVRA EMBARALHADA ===")
+    print(f"\nA palavra embaralhada é: {palavra_embaralhada.upper()}")
+    
+    # 4. Sistema de tentativa
+    tentativas = 3
+    while tentativas > 0:
+        chute = input(f"\nQual é a palavra? (Tentativas restando: {tentativas}): ").lower().strip()
+        
+        if chute == palavra_original:
+            print(f"🎉 Parabéns! Você acertou. A palavra era {palavra_original.upper()}!")
+            break
+        else:
+            tentativas -= 1
+            if tentativas > 0:
+                print("❌ Errado! Tente novamente.")
+            else:
+                print(f"💀 Game Over! A palavra correta era: {palavra_original.upper()}")
+
+if __name__ == "__main__":
+    jogar_palavra_embaralhada()

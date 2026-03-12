@@ -1,0 +1,12 @@
+# Palíndromo: Leia uma sequência de caracteres e informe se é um palíndromo.
+
+texto = input("Digite uma palavra ou frase: ")
+
+texto_limpo = texto.replace(" ", "").lower()
+
+texto_invertido = texto_limpo[::-1]
+
+if texto_limpo == texto_invertido:
+    print(f"'{texto}' é um palíndromo!")
+else:
+    print(f"'{texto}' não é um palíndromo.")

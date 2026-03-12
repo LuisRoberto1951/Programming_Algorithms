@@ -1,0 +1,31 @@
+# Leet Speak: Leia um texto e converta para a escrita estilo leet (ex: 1337)
+
+def converter_para_leet(texto):
+    # 1. Dicionário de substituição (as chaves devem ser maiúsculas para facilitar)
+    tabela_leet = {
+        'A': '4',
+        'E': '3',
+        'I': '1',
+        'O': '0',
+        'T': '7',
+        'S': '5',
+        'B': '8',
+        'G': '6',
+        'L': '1'
+    }
+
+    texto_convertido = ""
+    
+    # 2. Percorre o texto caractere por caractere
+    for letra in texto.upper():
+        # Se a letra estiver no dicionário, substitui. Se não, mantém a original.
+        texto_convertido += tabela_leet.get(letra, letra)
+
+    return texto_convertido
+
+# --- Teste no Terminal ---
+entrada = input("Digite uma frase para converter em Leet: ")
+resultado = converter_para_leet(entrada)
+
+print(f"\nOriginal: {entrada}")
+print(f"Leet Speak: {resultado}")

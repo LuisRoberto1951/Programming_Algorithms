@@ -1,0 +1,54 @@
+# Jogo da Forca: Desenvolva um jogo simples da forca usando uma lista de palavras
+
+import random
+
+def jogar_forca():
+    # 1. Lista de palavras para o jogo
+    palavras = ["algoritmo", "vscode", "python", "xano", "figma", "programacao", "desenvolvedor"]
+    
+    # 2. Escolhe uma palavra aleatória e prepara o jogo
+    palavra_secreta = random.choice(palavras).lower()
+    letras_descobertas = ["_" for _ in palavra_secreta]
+    tentativas = 6
+    letras_digitadas = []
+
+    print("=== BEM-VINDO AO JOGO DA FORCA ===")
+    
+    # 3. Loop principal do jogo
+    while tentativas > 0 and "_" in letras_descobertas:
+        print(f"\nPalavra: {' '.join(letras_descobertas)}")
+        print(f"Tentativas restantes: {tentativas}")
+        print(f"Letras já tentadas: {', '.join(letras_digitadas)}")
+        
+        chute = input("Digite uma letra: ").lower().strip()
+
+        # Validação da entrada
+        if len(chute) != 1 or not chute.isalpha():
+            print("❌ Por favor, digite apenas uma letra.")
+            continue
+        
+        if chute in letras_digitadas:
+            print(f"⚠️ Você já tentou a letra '{chute}'. Tente outra!")
+            continue
+
+        letras_digitadas.append(chute)
+
+        # 4. Verifica se a letra existe na palavra
+        if chute in palavra_secreta:
+            print(f"✅ Boa! A letra '{chute}' existe na palavra.")
+            for i in range(len(palavra_secreta)):
+                if palavra_secreta[i] == chute:
+                    letras_descobertas[i] = chute
+        else:
+            tentativas -= 1
+            print(f"❌ Errou! A letra '{chute}' não está na palavra.")
+
+    # 5. Finalização
+    if "_" not in letras_descobertas:
+        print(f"\n🎉 PARABÉNS! Você venceu! A palavra era: {palavra_secreta.upper()}")
+    else:
+        print(f"\n💀 GAME OVER! Você perdeu. A palavra era: {palavra_secreta.upper()}")
+
+# Executar o jogo
+if __name__ == "__main__":
+    jogar_forca()

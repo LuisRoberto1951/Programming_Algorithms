@@ -1,0 +1,34 @@
+# Número por extenso: Leia um número até 99 e mostre-o por extenso
+
+def numero_por_extenso(n):
+    # 1. Definição das listas (Mapeamento)
+    unidades = ["zero", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove"]
+    dez_a_dezenove = ["dez", "onze", "doze", "treze", "quatorze", "quinze", "dezesseis", "dezessete", "dezoito", "dezenove"]
+    dezenas = ["", "", "vinte", "trinta", "quarenta", "cinquenta", "sessenta", "setenta", "oitenta", "noventa"]
+
+    # 2. Validação do intervalo sugerido
+    if n < 0 or n > 99:
+        return "Por favor, digite um número entre 0 e 99."
+
+    # 3. Lógica de decisão
+    if n < 10:
+        return unidades[n]
+    
+    elif n < 20:
+        return dez_a_dezenove[n - 10]
+    
+    else:
+        dezena_idx = n // 10  # Ex: 25 // 10 = 2 (Vinte)
+        unidade_idx = n % 10   # Ex: 25 % 10 = 5 (Cinco)
+        
+        if unidade_idx == 0:
+            return dezenas[dezena_idx]
+        else:
+            return f"{dezenas[dezena_idx]} e {unidades[unidade_idx]}"
+
+# --- Execução do Programa ---
+try:
+    num = int(input("Digite um número de 0 a 99: "))
+    print(f"Resultado: {numero_por_extenso(num)}")
+except ValueError:
+    print("Erro: Por favor, digite apenas números inteiros.")

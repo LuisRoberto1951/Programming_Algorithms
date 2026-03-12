@@ -1,0 +1,17 @@
+# Contar espaços e vogais: Dada uma frase, conte quantos espaços existem e quantas vezes m as vogais.
+
+frase = input("Digite uma frase: ")
+
+espacos = 0
+vogais = 0
+
+letras_vogais = "aeiouáéíóúãõâêîôû"
+
+for caractere in frase:
+    if caractere == ' ':
+        espacos += 1
+    elif caractere.lower() in letras_vogais:
+        vogais += 1
+        
+print(f"Quantidade de espaços: {espacos}")
+print(f"Quantidade de vogais: {vogais}")
