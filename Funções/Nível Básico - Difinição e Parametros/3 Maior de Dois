@@ -1,0 +1,10 @@
+def maior_valor():
+    Valor1 = int(input('Digite um valor: '))
+    Valor2 = int(input( "Digite o segundo Valor: "))
+    if Valor1 > Valor2:
+        return Valor1
+    else:
+        return Valor2
+resultado = maior_valor()
+print(f"O maior número é: {resultado}")
+maior_valor()

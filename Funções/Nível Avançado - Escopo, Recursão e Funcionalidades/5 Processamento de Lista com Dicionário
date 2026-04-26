@@ -1,0 +1,29 @@
+def encontrar_produto_mais_caro(lista_produtos):
+    # Se a lista estiver vazia, retornamos None
+    if not lista_produtos:
+        return None
+
+    # Começamos assumindo que o primeiro produto é o mais caro
+    mais_caro = lista_produtos[0]
+
+    for produto in lista_produtos:
+        # Se o preço do produto atual for maior que o do "mais_caro"
+        if produto["preco"] > mais_caro["preco"]:
+            mais_caro = produto
+            
+    return mais_caro
+
+# --- Testando a Função ---
+
+# Nossa lista de dicionários (Exemplo de estoque)
+estoque = [
+    {"nome": "Fone de Ouvido", "preco": 150.00},
+    {"nome": "Smartphone", "preco": 2500.00},
+    {"nome": "Mouse Gamer", "preco": 300.00},
+    {"nome": "Monitor 4K", "preco": 3200.00},
+    {"nome": "Teclado Mecânico", "preco": 600.00}
+]
+
+produto_top = encontrar_produto_mais_caro(estoque)
+
+print(f"O produto mais caro é: {produto_top['nome']} custando R$ {produto_top['preco']}")

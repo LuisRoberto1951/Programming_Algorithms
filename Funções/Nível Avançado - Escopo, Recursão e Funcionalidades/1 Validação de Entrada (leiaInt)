@@ -1,0 +1,9 @@
+def leiaInt():
+    while True:
+        entrada = input("Digite um número inteiro: ")
+        if entrada.isdigit():
+            return int(entrada)
+        else:
+            print("Entrada inválida. Por favor, digite um número inteiro.")
+numero = leiaInt()
+print(f"O número inteiro digitado foi: {numero}")

@@ -1,0 +1,7 @@
+def verificcar_par(Numeros):
+    Numero = int(input("Digita um número: "))
+    if Numero % 2 == 0:
+        return True
+    else:
+        return False
+print(verificcar_par)

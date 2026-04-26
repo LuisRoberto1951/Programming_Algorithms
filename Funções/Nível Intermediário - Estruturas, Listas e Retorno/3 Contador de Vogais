@@ -1,0 +1,10 @@
+def contar_vogais(texto):
+    vogais = "aeiouAEIOU"
+    contador = 0
+    for char in texto:
+        if char in vogais:
+            contador += 1
+    return contador
+entrada = input("Digite uma string: ")
+quantidade_vogais = contar_vogais(entrada)
+print(f"A quantidade de vogais na string é: {quantidade_vogais}")

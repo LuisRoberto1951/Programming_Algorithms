@@ -1,0 +1,6 @@
+def calcular_area():
+    base = float(input("Digite o valor da base: "))
+    altura = float(input("Digite o valor da altura: "))
+    valor_final = base * altura
+    print(f"A área total é: {valor_final}")
+calcular_area()

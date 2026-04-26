@@ -1,0 +1,9 @@
+def calcular_media(notas):
+    if not notas:
+        return 0
+    media = sum(notas) / len(notas)
+    return media
+entrada = input("Digite as notas separadas por vírgula: ")
+lista_de_notas = [float(n) for n in entrada.split(",")]
+resultado = calcular_media(lista_de_notas)
+print(f"A média das notas é: {resultado:.2f}")

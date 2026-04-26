@@ -1,0 +1,17 @@
+def configurar_perfil(nome, idade, cidade="Desconhecida"):
+    return {
+        "nome": nome,
+        "idade": idade,
+        "cidade": cidade
+    }
+nome_usuario = input("Digite o nome: ")
+idade_usuario = int(input("Digite a idade: "))
+cidade_usuario = input("Digite a cidade (ou deixe em branco): ").strip()
+
+if cidade_usuario:
+    perfil = configurar_perfil(nome_usuario, idade_usuario, cidade_usuario)
+else:
+    perfil = configurar_perfil(nome_usuario, idade_usuario)
+
+print("\nPerfil Criado:")
+print(perfil)
