@@ -1,0 +1,6 @@
+cria um método chamado medida_temp que exibe a temperatura do ambiente.
+    
+def medida_temp
+    puts "A temperatura do ambiente é de 25 graus Celsius."
+end
+medida_temp = medida_temp()

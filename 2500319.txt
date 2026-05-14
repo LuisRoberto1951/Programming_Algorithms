@@ -1,0 +1,2 @@
+Conteúdo do 2500319.txt:
+Este é um arquivo criado automaticamente via Python no VS Code!

@@ -1,0 +1,7 @@
+def verificar_nivel(Valor):
+    if Valor < 0:
+        return "Valor Negativo"
+    elif Valor <= 10 :
+        return "Nível baixo"
+    else:
+        return "Nível alto"

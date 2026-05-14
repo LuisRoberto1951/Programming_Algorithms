@@ -1,0 +1,15 @@
+# Lista com os nomes dos arquivos que queremos criar
+nomes_arquivos = ["2500317.txt", "2500318.txt", "2500319.txt"]
+
+# Texto que será inserido em cada um (opcional)
+conteudo = "Este é um arquivo criado automaticamente via Python no VS Code!"
+
+for nome in nomes_arquivos:
+    # 1. Abre/Cria o arquivo para ESCRITA ("w")
+    with open(nome, "w", encoding="utf-8") as arquivo:
+        # 2. Escreve o texto
+        arquivo.write(f"Conteúdo do {nome}:\n{conteudo}")
+    
+    print(f"'{nome}' criado com sucesso!")
+
+print("\n--- Todos os 3 arquivos foram gerados no seu diretório! ---")

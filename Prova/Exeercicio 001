@@ -1,0 +1,12 @@
+def calcular_custo(minutos):    
+    if minutos <= 100:
+        custo = minutos * 0.50
+    elif minutos <= 200:
+        custo = 100 * 0.50 + (minutos - 100) * 0.30
+    else:
+        custo = 100 * 0.50 + 100 * 0.30 + (minutos - 200) * 0.20
+    return custo    
+
+minutos = int(input("Digite o número de minutos consumidos: "))
+custo_total = calcular_custo(minutos)   
+print(f"O custo total da conta de telefone é: R$ {custo_total:.2f}") 
